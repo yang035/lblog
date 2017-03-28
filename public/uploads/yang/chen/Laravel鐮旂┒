@@ -1,0 +1,2 @@
+1,composer安装项目
+composer create-project laravel/laravel your-project-name
