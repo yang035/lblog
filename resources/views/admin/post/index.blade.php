@@ -34,8 +34,8 @@
                             <td data-order="{{ $post->published_at->timestamp }}">
                                 {{ $post->published_at->format('j-M-y g:ia') }}
                             </td>
-                            <td>{{ $post->title }}</td>
-                            <td>{{ $post->subtitle }}</td>
+                            <td>{{ substr($post->title,0,50) }}</td>
+                            <td>{{ str_limit($post->subtitle,50,'...') }}</td>
                             <td>
                                 <a href="/admin/post/{{ $post->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> Edit
