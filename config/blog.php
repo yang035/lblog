@@ -12,5 +12,5 @@ return [
         'storage' => 'local',
         'webpath' => '/uploads/',
     ],
-    'contact_email'=>env('MAIL_FROM'),
+    'contact_email'=>env('MAIL_TO'),
 ];

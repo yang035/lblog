@@ -6,7 +6,7 @@
  * Date: 2017/3/28
  * Time: 14:31
  */
-use App\Tag;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
 class TagTableSeeder extends Seeder

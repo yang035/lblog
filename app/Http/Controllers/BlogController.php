@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Jobs\BlogIndexData;
 use App\Http\Requests;
-use App\Post;
+use App\Models\Post;
 use App\Services\RssFeed;
 use App\Services\SiteMap;
-use App\Tag;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller

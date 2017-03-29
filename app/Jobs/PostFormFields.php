@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
-use App\Post;
-use App\Tag;
+use App\Models\Post;
+use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;
 
