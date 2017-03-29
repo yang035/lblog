@@ -16,6 +16,13 @@ Route::get('/', function () {
 });
 Route::get('blog','BlogController@index');
 Route::get('blog/{slug}','BlogController@showPost');
+//邮件路由
+Route::get('contact', 'ContactController@showForm');
+Route::post('contact', 'ContactController@sendContactInfo');
+//rss路由
+Route::get('rss','BlogController@rss');
+//站点地图
+Route::get('sitemap.xml','BlogController@siteMap');
 
 //admin area
 Route::get('admin',function (){
