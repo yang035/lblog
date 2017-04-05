@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Services\RssFeed;
 use App\Services\SiteMap;
 use App\Models\Tag;
+use DebugBar\DebugBar;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller

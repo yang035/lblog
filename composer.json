@@ -11,7 +11,9 @@
         "doctrine/dbal": "v2.4.2",
         "michelf/php-markdown": "^1.7",
         "michelf/php-smartypants": "^1.8",
-        "suin/php-rss-writer": "^1.5"
+        "suin/php-rss-writer": "^1.5",
+        "barryvdh/laravel-debugbar": "^2.3",
+        "laravel/spark-installer": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -28,6 +28,7 @@ Route::get('sitemap.xml','BlogController@siteMap');
 Route::get('admin',function (){
     return redirect('admin/post');
 });
+
 Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
     resource('admin/post', 'PostController', ['except' => 'show']);
     resource('admin/tag', 'TagController');
@@ -53,6 +54,9 @@ Route::get('testViewHello',function (){
     Route::get('testViewHome',function (){
         return view('home');
     });
+Route::get('/age/refuse',['as'=>'refuse',function(){
+    return "18岁以上男子才能访问！";
+}]);
 //用于监控打印执行的sql
 Event::listen('illuminate.query',function($query){
 //    var_dump($query);

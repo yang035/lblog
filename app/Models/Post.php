@@ -17,6 +17,7 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany('App\Models\Tag', 'post_tag_pivot');
+
     }
 
     public function setTitleAttribute($value)
