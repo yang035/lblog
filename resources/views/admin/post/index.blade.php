@@ -31,7 +31,7 @@
                                 @foreach ($posts as $post)
                                     <tr class="gradeC">
                                         <td data-order="{{ $post->published_at->timestamp }}">
-                                            {{ $post->published_at->format('j-M-y g:ia') }}
+                                            {{ $post->published_at->format('Y-m-d H:i:s') }}
                                         </td>
                                         <td>{{ substr($post->title,0,50) }}</td>
                                         <td>{{ str_limit($post->subtitle,50,'...') }}</td>

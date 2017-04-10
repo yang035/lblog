@@ -1,11 +1,13 @@
 @extends('admin.layout')
 
 @section('styles')
-    <link href="/assets/pickadate/themes/default.css" rel="stylesheet">
-    <link href="/assets/pickadate/themes/default.date.css" rel="stylesheet">
-    <link href="/assets/pickadate/themes/default.time.css" rel="stylesheet">
+    {{--<link href="/assets/pickadate/themes/default.css" rel="stylesheet">--}}
+    {{--<link href="/assets/pickadate/themes/default.date.css" rel="stylesheet">--}}
+    {{--<link href="/assets/pickadate/themes/default.time.css" rel="stylesheet">--}}
     <link href="/assets/selectize/css/selectize.css" rel="stylesheet">
     <link href="/assets/selectize/css/selectize.bootstrap3.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
 @stop
 
 @section('content')
@@ -97,17 +99,30 @@
     <script src="/assets/pickadate/picker.date.js"></script>
     <script src="/assets/pickadate/picker.time.js"></script>
     <script src="/assets/selectize/selectize.min.js"></script>
+    <script src="/inspinia/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="/inspinia/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="/inspinia/js/plugins/clockpicker/clockpicker.js"></script>
     <script>
         $(function() {
-            $("#publish_date").pickadate({
-                format: "mmm-d-yyyy"
-            });
-            $("#publish_time").pickatime({
-                format: "h:i A"
-            });
+//            $("#publish_date").pickadate({
+//                format: "mmm-d-yyyy"
+//            });
+//            $("#publish_time").pickatime({
+//                format: "h:i A"
+//            });
             $("#tags").selectize({
                 create: true
             });
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+            $('.clockpicker').clockpicker();
+
         });
+
     </script>
 @stop
