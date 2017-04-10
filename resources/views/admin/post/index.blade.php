@@ -6,38 +6,18 @@
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Blog</h5>
+                        <a href="/admin/post/create" class="btn btn-success btn-md">
+                            <i class="fa fa-plus-circle"></i> New Post
+                        </a>
                         @include('admin.partials.errors')
                         @include('admin.partials.success')
-
-
-
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-wrench"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a>
-                            <a href="/admin/post/create" class="btn btn-success btn-md">
-                                <i class="fa fa-plus-circle"></i> New Post
-                            </a>
-                        </div>
                     </div>
                     <div class="ibox-content">
 
                         <div class="table-responsive">
 
-                            <table id="posts-table" class="table table-striped table-bordered table-hover dataTables-example" >
+                            <table id="posts-table"
+                                   class="table table-striped table-bordered table-hover dataTables-example">
 
                                 <thead>
                                 <tr>
@@ -87,30 +67,31 @@
 
 @section('scripts')
     <script>
-        $(function() {
-                $('#posts-table').DataTable({
-                    pageLength: 10,
-                    responsive: true,
-                    dom: '<"html5buttons"B>lTfgitp',
-                    buttons: [
-                        { extend: 'copy'},
-                        {extend: 'csv'},
-                        {extend: 'excel', title: 'ExampleFile'},
-                        {extend: 'pdf', title: 'ExampleFile'},
+        $(function () {
+            $('#posts-table').DataTable({
+                pageLength: 10,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    {extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
 
-                        {extend: 'print',
-                            customize: function (win){
-                                $(win.document.body).addClass('white-bg');
-                                $(win.document.body).css('font-size', '10px');
+                    {
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
 
-                                $(win.document.body).find('table')
-                                    .addClass('compact')
-                                    .css('font-size', 'inherit');
-                            }
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
                         }
-                    ]
+                    }
+                ]
 
-                });
+            });
         });
     </script>
 @stop

@@ -59,21 +59,33 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="form-group">
-            <label for="publish_date" class="col-md-3 control-label">
-                Pub Date
-            </label>
-            <div class="col-md-8">
-                <input class="form-control" name="publish_date" id="publish_date" type="text" value="{{ $publish_date }}">
+        <div class="form-group" id="data_1">
+            <label for="publish_date" class="col-md-3 control-label">Pub Date</label>
+            <div class="input-group date">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" name="publish_date" id="publish_date" value="{{ $publish_date }}">
             </div>
         </div>
+        {{--<div class="form-group">--}}
+            {{--<label for="publish_date" class="col-md-3 control-label">--}}
+                {{--Pub Date--}}
+            {{--</label>--}}
+            {{--<div class="col-md-8">--}}
+                {{--<input class="form-control" name="publish_date" id="publish_date" type="text" value="{{ $publish_date }}">--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <div class="form-group">
             <label for="publish_time" class="col-md-3 control-label">
                 Pub Time
             </label>
-            <div class="col-md-8">
+            <div class="input-group clockpicker" data-autoclose="true">
                 <input class="form-control" name="publish_time" id="publish_time" type="text" value="{{ $publish_time }}">
+                <span class="input-group-addon">
+                                    <span class="fa fa-clock-o"></span>
+                                </span>
             </div>
+            {{--<div class="col-md-8">--}}
+                {{--<input class="form-control" name="publish_time" id="publish_time" type="text" value="{{ $publish_time }}">--}}
+            {{--</div>--}}
         </div>
         <div class="form-group">
             <div class="col-md-8 col-md-offset-3">

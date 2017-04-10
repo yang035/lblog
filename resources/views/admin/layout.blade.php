@@ -19,9 +19,10 @@
 
     <link href="/inspinia/css/animate.css" rel="stylesheet">
     <link href="/inspinia/css/style.css" rel="stylesheet">
-    <link href="/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-    <link href="/assets/selectize/css/selectize.css" rel="stylesheet">
+    {{--<link href="/inspinia/css/plugins/datapicker/datepicker3.css" rel="stylesheet">--}}
+    {{--<link href="/assets/selectize/css/selectize.css" rel="stylesheet">--}}
     <link href="/assets/pickadate/themes/default.css" rel="stylesheet">
+    @yield('styles')
 
 
 

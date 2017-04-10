@@ -83,10 +83,10 @@
             <div class="modal-body">
                 <p class="lead">
                     <i class="fa fa-question-circle fa-lg"></i>
-                        Are you sure you want to delete the
-                        <kbd><span id="delete-folder-name1">folder</span></kbd>
-                        folder?
-                 </p>
+                    Are you sure you want to delete the
+                    <kbd><span id="delete-folder-name1">folder</span></kbd>
+                    folder?
+                </p>
             </div>
             <div class="modal-footer">
                 <form method="POST" action="/admin/upload/folder">
