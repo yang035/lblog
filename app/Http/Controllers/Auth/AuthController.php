@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -26,6 +27,7 @@ class AuthController extends Controller
 
     protected $redirectAfterLogout = '/auth/login';
     protected $redirectTo = '/admin/post';
+//    protected $redirectPath = '/profile';
     
     /**
      * Create a new authentication controller instance.

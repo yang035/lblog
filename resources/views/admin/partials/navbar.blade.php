@@ -21,10 +21,10 @@
                         Blog
                     </div>
                 </li>
-                <li class="active">
-                    <a href="/"><i class="fa fa-table"></i> <span class="nav-label">BlogTables</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
 
+                <li class="active">
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">BlogTables</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
                         <li @if (Request::is('admin/post*')) class="active" @endif>
                             <a href="/admin/post">Posts</a>
                         </li>
@@ -35,6 +35,15 @@
                             <a href="/admin/upload">Uploads</a>
                         </li>
 
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Message</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+
+                        <li @if (Request::is('admin/message*')) class="active" @endif>
+                            <a href="/admin/message">Message</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

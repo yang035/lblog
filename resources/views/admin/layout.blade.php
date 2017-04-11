@@ -205,7 +205,7 @@
 <!-- Custom and plugin javascript -->
 <script src="/inspinia/js/inspinia.js"></script>
 <script src="/assets/selectize/selectize.min.js"></script>
-<script src="/assets/js/admin.js"></script>
+{{--<script src="/assets/js/admin.js"></script>--}}
 
 
 <!-- Page-Level Scripts -->
