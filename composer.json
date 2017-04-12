@@ -13,7 +13,9 @@
         "michelf/php-smartypants": "^1.8",
         "suin/php-rss-writer": "^1.5",
         "barryvdh/laravel-debugbar": "^2.3",
-        "laravel/spark-installer": "^1.2"
+        "laravel/spark-installer": "^1.2",
+        "fenos/notifynder": "^4.0",
+        "cmgmyr/messenger": "~2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

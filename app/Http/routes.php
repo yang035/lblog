@@ -33,6 +33,7 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
     resource('admin/post', 'PostController', ['except' => 'show']);
     resource('admin/tag', 'TagController');
     resource('admin/message', 'MessageController');
+    resource('admin/messages', 'MessagesController');
     get('admin/upload','UploadController@index');
     
     post('admin/upload/file', 'UploadController@uploadFile');
@@ -40,6 +41,14 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
     post('admin/upload/folder', 'UploadController@createFolder');
     delete('admin/upload/folder', 'UploadController@deleteFolder');
 });
+
+//Route::group(['namespace'=>'Admin','prefix' => 'messages'], function () {
+//    Route::get('messages/', ['as' => 'messages', 'uses' => 'MessagesController@index']);
+//    Route::get('messages/create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+//    Route::post('messages/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+//    Route::get('messages/{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+//    Route::put('messages/{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+//});
 
 //logging in and out
 Route::get('/auth/login','Auth\AuthController@getLogin');

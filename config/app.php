@@ -137,6 +137,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Fenos\Notifynder\NotifynderServiceProvider::class,
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -196,6 +198,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Debuger'      => Barryvdh\Debugbar\Facade::class,
+        'Notifynder' =>Fenos\Notifynder\NotifynderServiceProvider::class,
+        'Messenger' =>Cmgmyr\Messenger\MessengerServiceProvider::class,
 
     ],
 
